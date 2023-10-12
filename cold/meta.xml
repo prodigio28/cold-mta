@@ -4,6 +4,8 @@
 
     <script src="player/server.lua" type="server"/>
 
+    <script src="ui/main.lua" type="client" cache="false"/>
+
     <script src="devServer.lua" type="server"/>
 
 </meta>

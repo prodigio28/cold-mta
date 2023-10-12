@@ -4,21 +4,34 @@
 
     <script src="createInput.lua" type="client" cache="false"/>
     <script src="createButton.lua" type="client" cache="false"/>
+    <script src="circleHud.lua" type="client" cache="false"/>
 
     <file src="images/inputs/background1.png"/>
     <file src="images/buttons/background1.png"/>
     <file src="images/utils/circle1.png"/>
 
+    <file src="images/hud/health.png"/>
+    <file src="images/hud/hunger.png"/>
+    <file src="images/hud/thirst.png"/>
+    <file src="images/hud/armour.png"/>
+    <file src="images/hud/speedbg.png"/>
+    <file src="images/hud/speed.png"/>
+
     <file src="images/cold_logo1.png"/>
 
     <file src="fonts/inter/interRegular.ttf"/>
+    <file src="fonts/inter/interBlack.ttf"/>
 
     <export function="createInput" type="client"/>
     <export function="createButton" type="client"/>
+    <export function="circleHud" type="client"/>
+    <export function="setValueCircle" type="client"/>
 
     <export function="getInputById" type="client"/>
     <export function="getButtonById" type="client"/>
+    <export function="getCircleHudById" type="client"/>
 
     <export function="destroyInputById" type="client"/>
     <export function="destroyButtonById" type="client"/>
+    <export function="destroyCircleHudById" type="client"/>
 </meta>

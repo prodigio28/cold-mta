@@ -1,0 +1,7 @@
+<meta>
+
+    <info author="@gustavol28" name="Essencials System" version="1.0.0"/>
+
+    <script src="ui/hud.lua" type="client" cache="false"/>
+
+</meta>
