@@ -1,0 +1,9 @@
+<meta>
+
+    <info author="@gustavol28" name="Account System" version="1.0.0"/>
+
+    <script src="account/server.lua" type="server"/>
+    
+    <script src="ui/main.lua" type="client" cache="false"/>
+
+</meta>

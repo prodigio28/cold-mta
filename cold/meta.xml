@@ -1,0 +1,9 @@
+<meta>
+
+    <info author="@gustavol28" name="Gamemode to COLD RP" version="1.0.0"/>
+
+    <script src="player/server.lua" type="server"/>
+
+    <script src="devServer.lua" type="server"/>
+
+</meta>

@@ -1,0 +1,24 @@
+<meta>
+
+    <info author="@gustavol28" name="Assets to COLD RP" version="1.0.0"/>
+
+    <script src="createInput.lua" type="client" cache="false"/>
+    <script src="createButton.lua" type="client" cache="false"/>
+
+    <file src="images/inputs/background1.png"/>
+    <file src="images/buttons/background1.png"/>
+    <file src="images/utils/circle1.png"/>
+
+    <file src="images/cold_logo1.png"/>
+
+    <file src="fonts/inter/interRegular.ttf"/>
+
+    <export function="createInput" type="client"/>
+    <export function="createButton" type="client"/>
+
+    <export function="getInputById" type="client"/>
+    <export function="getButtonById" type="client"/>
+
+    <export function="destroyInputById" type="client"/>
+    <export function="destroyButtonById" type="client"/>
+</meta>
