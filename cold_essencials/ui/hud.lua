@@ -80,24 +80,59 @@ local function userInterface()
     end
 end
 
+local alphaVehicle_155 = 0
+local alphaVehicle = 0
+
 function updateStats()
-    local health = getElementHealth(localPlayer)
-    local armour = getPedArmor(localPlayer)
-    local thirst = getElementData(localPlayer, "cold:thirst") or 50
-    local hunger = getElementData(localPlayer, "cold:hunger") or 90
-    assets:setValueCircle("health", health * (360 / 100))
-    assets:setValueCircle("armour", armour * (360 / 100))
-    assets:setValueCircle("hunger", hunger)
-    assets:setValueCircle("thirst", thirst)
+    local healthP = getElementHealth(localPlayer)
+    local armourP = getPedArmor(localPlayer)
+    local thirstP = getElementData(localPlayer, "cold:thirst") or 50
+    local hungerP = getElementData(localPlayer, "cold:hunger") or 90
+    assets:setValueCircle("health", healthP * (360 / 100))
+    assets:setValueCircle("armour", armourP * (360 / 100))
+    assets:setValueCircle("hunger", hungerP)
+    assets:setValueCircle("thirst", thirstP)
+    local RPM = 0
+    local KMH = 0
+    local fuel = 0
     local vehicle = getPedOccupiedVehicle(localPlayer)
     if vehicle then
-        local RPM = getVehicleRPM(vehicle)
-        local speed = getElementSpeed(vehicle, "km/h")
-        local KMH = string.format("#424242%03d", speed)
-        dxDrawImageSection(mainX - (90), mainY + (mainHeight - 190), 78, 119, 0, 0, 78, 119, ":cold_assets/images/hud/speedbg.png", 0, 0, 0, tocolor(100, 100, 100, 155))
-        dxDrawImageSection(mainX - (90), mainY + (mainHeight - 70), 78, -(119 * (RPM / 9900)), 0, 0, 78, -(119 * (RPM / 9900)), ":cold_assets/images/hud/speed.png", 0, 0, 0, tocolor(255, 255, 255))
-        dxDrawText(KMH, mainX - (60), mainY + (mainHeight - 140), 0, 0, tocolor(255, 255, 255), 1, interBlack, "left", "top", false, false, false, true)
+        if alphaVehicle < 255 then alphaVehicle = alphaVehicle + 10 end
+        if alphaVehicle > 255 then alphaVehicle = 255 end
+        if alphaVehicle_155 < 155 then if alphaVehicle_155 > 155 then alphaVehicle_155 = 155 end alphaVehicle_155 = alphaVehicle_155 + 10 end
+        if alphaVehicle_155 > 155 then alphaVehicle_155 = 155 end
+        RPM = getVehicleRPM(vehicle)
+        KMH = math.floor(getElementSpeed(vehicle, "km/h"))
+        fuel = getElementData(vehicle, "cold:fuel") or 15
+    else
+        if alphaVehicle ~= 0 then alphaVehicle = alphaVehicle - 10 end
+        if alphaVehicle < 0 then alphaVehicle = 0 end
+        if alphaVehicle_155 ~= 0 then alphaVehicle_155 = alphaVehicle_155 - 10 end
+        if alphaVehicle_155 < 0 then alphaVehicle_155 = 0 end
+        
     end
+
+    dxDrawImageSection(mainX - (90), mainY + (mainHeight - 190), 78, 119, 0, 0, 78, 119, ":cold_assets/images/hud/speedbg.png", 0, 0, 0, tocolor(100, 100, 100, alphaVehicle_155))
+    dxDrawImageSection(mainX - (90), mainY + (mainHeight - 70), 78, -(119 * (RPM / 9900)), 0, 0, 78, -(119 * (RPM / 9900)), ":cold_assets/images/hud/speed.png", 0, 0, 0, tocolor(255, 255, 255, alphaVehicle))
+    if KMH > 10 then
+        if KMH <= 99 then
+            dxDrawText("#4242420#ffffff"..KMH, mainX - (60), mainY + (mainHeight - 140), 0, 0, tocolor(255, 255, 255, alphaVehicle), 1, interBlack, "left", "top", false, false, false, true)
+        elseif KMH >= 100 then
+            dxDrawText(KMH, mainX - (60), mainY + (mainHeight - 140), 0, 0, tocolor(255, 255, 255, alphaVehicle), 1, interBlack, "left", "top", false, false, false, true)
+        end
+    else
+        dxDrawText("#42424200#ffffff"..KMH, mainX - (60), mainY + (mainHeight - 140), 0, 0, tocolor(255, 255, 255, alphaVehicle), 1, interBlack, "left", "top", false, false, false, true)
+    end
+
+    dxDrawImage(mainX - (130), mainY + (mainHeight - 115), 15, 15, ":cold_assets/images/hud/iconfuel.png", 0, 0, 0, tocolor(255, 255, 255, alphaVehicle))
+    dxDrawImageSection(mainX - (150), mainY + (mainHeight - 140), 72, 73, 0, 0, 72, 73, ":cold_assets/images/hud/bgFuel.png", 0, 0, 0, tocolor(100, 100, 100, alphaVehicle_155))
+    if fuel <= 15 then
+        dxDrawImageSection(mainX - (150), mainY + (mainHeight - 70), 53, -(69 * fuel / 100), 0, 0, 53, -(69 * fuel / 100), ":cold_assets/images/hud/fuel.png", 0, 0, 0, tocolor(255, 0, 0, alphaVehicle))
+    else
+        dxDrawImageSection(mainX - (150), mainY + (mainHeight - 70), 53, -(69 * fuel / 100), 0, 0, 53, -(69 * fuel / 100), ":cold_assets/images/hud/fuel.png", 0, 0, 0, tocolor(255, 255, 255, alphaVehicle))
+    end
+
+
 end
 
 function Initial()

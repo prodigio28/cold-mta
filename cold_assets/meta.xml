@@ -16,6 +16,9 @@
     <file src="images/hud/armour.png"/>
     <file src="images/hud/speedbg.png"/>
     <file src="images/hud/speed.png"/>
+    <file src="images/hud/bgFuel.png"/>
+    <file src="images/hud/fuel.png"/>
+    <file src="images/hud/iconfuel.png"/>
 
     <file src="images/cold_logo1.png"/>
 
