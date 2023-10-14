@@ -2,7 +2,6 @@ loadstring(exports.dgs:dgsImportFunction())()
 local screenW, screenH = guiGetScreenSize()
 
 local assets = exports.cold_assets
-local essencials = exports.cold_essencials
 
 local panelState = "loading"
 local panelElements = {
@@ -321,7 +320,6 @@ function panelSwitch(toPanel)
                 if type(backgroundBlur) == "userdata" then destroyElement(backgroundBlur) end
                 if type(logoImage) == "userdata" then destroyElement(logoImage) end
                 showCursor(false)
-                essencials:showHud()
                 triggerServerEvent("cold:loginSpawn", resourceRoot, localPlayer)
             end
         end, 1000, 1)

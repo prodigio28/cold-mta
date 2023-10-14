@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/all.css">
+  <link rel="stylesheet" href="src/css/app.css">
+  <script src="src/js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="src/js/jquery-ui.min.js"></script>
+  <script src="src/js/app.js"></script>
+</head>
+<body style="display: none;">
+
+  <main>
+
+    <inventory>
+      <header>
+        <div class="inventory-title">
+          <h1>inventário <span>principal</span></h1>
+          <small>Atente-se a durabilidade dos itens.</small>
+        </div>
+        <div class="inventory-weight">
+          <h2>peso</h2>
+          <span id="weight"></span>
+
+          <svg class="weightProgress" width="50" height="50">
+            <circle class="outer" stroke="#FFFFFF" stroke-width="2.2" style="stroke-opacity: 0.2;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+            <circle class="progress progress-weight" stroke="#848CEB" stroke-width="2.2" style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+            <defs>
+              <linearGradient id="gradient">
+                <stop offset="30%" stop-color="#ffff" />
+                <stop offset="100%" stop-color="#fff" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+        </div>
+      </header>
+      <section class="invLeft"></section>
+    </inventory>
+
+    <inventoryActions>
+      <input class="amount" placeholder="QTD" type="number" onKeyPress="if (this.value.length==9) return false;" />
+      <button class="use">Usar</button>
+      <button class="send">enviar</button>
+    </inventoryActions>
+    
+    <inventory>
+      <header>
+        <div class="inventory-title">
+          <h1>inventário <span>secundário</span></h1>
+          <small>Itens dropados no chão.</small>
+        </div>
+        <div class="inventory-weight">
+          <span>CHÃO<small></small></span>
+          <h2>CHÃO</h2>
+        </div>
+      </header>
+      <section class="invRight"></section>
+    </inventory>
+
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<meta>
+    <min_mta_version client="1.3.0-9.04431" />
+    <info author="@gustavol28" name="Inventory System" version="1.0.0"/>
+
+    <script src="general.lua" type="shared" cache="false"/>
+
+    <script src="player/items.lua" type="server"/>
+
+    <script src="userinterface/inventory.lua" type="client" cache="false"/>
+
+    <file src="userinterface/html/index.html"/>
+
+    <file src="userinterface/html/src/js/jquery-3.7.1.js"/>
+    <file src="userinterface/html/src/js/jquery-ui.min.js"/>
+    <file src="userinterface/html/src/js/app.js"/>
+
+    <file src="userinterface/html/src/css/all.css"/>
+    <file src="userinterface/html/src/css/app.css"/>
+
+    <file src="userinterface/html/src/images/apple.png"/>
+</meta>

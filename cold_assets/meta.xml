@@ -39,6 +39,10 @@
 
         <!---->
 
+    <!-- INVENTORY -->
+        <file src="images/inventory/itens.png"/>
+        <file src="images/inventory/agua.png"/>
+
         <!-- UTILS -->
         <file src="images/utils/main_logo.png"/>
 
@@ -80,4 +84,6 @@
         <export function="getButtonById" type="client"/>
         <export function="destroyButtonById" type="client"/>
     <!---->
+    <include resource="cold_account"/>
+    <include resource="cold_essencials"/>
 </meta>
