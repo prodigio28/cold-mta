@@ -11,5 +11,6 @@ function loadSpawn(player, x, y, z, skinID)
         end
         setCameraTarget(player)
         fadeCamera(player, true, 5)
+        triggerClientEvent(player, "cold:showHud", player)
     end, 1500, 1)
 end

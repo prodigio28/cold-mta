@@ -91,7 +91,8 @@ function showHud()
         addEventHandler("onClientRender", root, updateStats)
     end
 end
---addEventHandler("onClientResourceStart", resourceRoot, showHud)
+addEvent("cold:showHud", true)
+addEventHandler("cold:showHud", root, showHud)
 
 function hideHud()
     if showing then

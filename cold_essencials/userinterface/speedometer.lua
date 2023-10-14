@@ -74,7 +74,7 @@ function hideSpeedometer(player)
         showing = false
     end
 end
-addEventHandler("onClientVehicleExit", root, hideSpeedometer)
+addEventHandler("onClientVehicleStartExit", root, hideSpeedometer)
 
 function Initial()
     addEventHandler("onClientRender", root, userinterface)

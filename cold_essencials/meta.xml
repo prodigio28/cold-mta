@@ -5,8 +5,12 @@
     <script src="userinterface/hud.lua" type="client" cache="false"/>
     <script src="userinterface/speedometer.lua" type="client" cache="false"/>
 
+    <script src="essencials/isMouseInPosition.lua" type="client" cache="false"/>
+
     <export function="showHud" type="client"/>
     <export function="hideHud" type="client"/>
+
+    <export function="isMouseInPosition" type="client"/>
     <!-- INCLUDES -->
     <include resource="cold_vehicles"/>
 </meta>

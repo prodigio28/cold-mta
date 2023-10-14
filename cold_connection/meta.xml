@@ -6,4 +6,5 @@
     
     <script src="mysql/server.lua" type="server"/>
 
+    <export function="getMySQL" type="server"/>
 </meta>
