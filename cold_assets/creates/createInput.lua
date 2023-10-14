@@ -21,5 +21,6 @@ function getInputById(id)
 end
 
 function destroyInputById(id)
-    return destroyElement(Inputs[id])
+    destroyElement(Inputs[id])
+    return
 end

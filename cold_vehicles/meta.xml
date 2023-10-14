@@ -1,0 +1,9 @@
+<meta>
+    <info author="@gustavol28" name="Vehicle System" version="1.0.0"/>
+
+    <script src="utils/getElementSpeed.lua" type="client" cache="false"/>
+    <script src="utils/getVehicleRPM.lua" type="client" cache="false"/>
+
+    <export function="getElementSpeed" type="client"/>
+    <export function="getVehicleRPM" type="client"/>
+</meta>

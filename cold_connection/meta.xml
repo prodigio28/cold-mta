@@ -1,5 +1,5 @@
 <meta>
-
+    <download_priority_group>-1</download_priority_group>
     <info author="@gustavol28" name="Databse connection" version="1.0.0"/>
 
     <script src="cache.lua" type="shared" cache="false"/>

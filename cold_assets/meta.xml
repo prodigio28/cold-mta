@@ -1,40 +1,83 @@
 <meta>
+    <download_priority_group>2</download_priority_group>
+    <info author="@gustavol28" name="Assets COLD RP" version="1.0.0"/>
 
-    <info author="@gustavol28" name="Assets to COLD RP" version="1.0.0"/>
+    <script src="cache.lua" type="shared" cache="false"/>
+    <script src="createFont.lua" type="client" cache="false"/>
 
-    <script src="createInput.lua" type="client" cache="false"/>
-    <script src="createButton.lua" type="client" cache="false"/>
-    <script src="circleHud.lua" type="client" cache="false"/>
+    <script src="createMessageC.lua" type="client" cache="false"/>
+    <script src="createMessageS.lua" type="server"/>
 
-    <file src="images/inputs/background1.png"/>
-    <file src="images/buttons/background1.png"/>
-    <file src="images/utils/circle1.png"/>
+    <!-- CREATES -->
+    <script src="creates/createButton.lua" type="client" cache="false"/>
+    <script src="creates/createCircleHud.lua" type="client" cache="false"/>
+    <script src="creates/createInput.lua" type="client" cache="false"/>
 
-    <file src="images/hud/health.png"/>
-    <file src="images/hud/hunger.png"/>
-    <file src="images/hud/thirst.png"/>
-    <file src="images/hud/armour.png"/>
-    <file src="images/hud/speedbg.png"/>
-    <file src="images/hud/speed.png"/>
-    <file src="images/hud/bgFuel.png"/>
-    <file src="images/hud/fuel.png"/>
-    <file src="images/hud/iconfuel.png"/>
+    <!-- IMAGES -->
+        <!-- INPUTS -->
+        <file src="images/inputs/input1.png"/>
 
-    <file src="images/cold_logo1.png"/>
+        <!-- BUTTONS -->
+        <file src="images/buttons/button1.png"/>
 
-    <file src="fonts/inter/interRegular.ttf"/>
-    <file src="fonts/inter/interBlack.ttf"/>
+        <!-- CIRCLES -->
+        <file src="images/circles/circle1.png"/>
 
-    <export function="createInput" type="client"/>
-    <export function="createButton" type="client"/>
-    <export function="circleHud" type="client"/>
-    <export function="setValueCircle" type="client"/>
+        <!-- HUD -->
+            <!-- PLAYER -->
+            <file src="images/hud/player/armour.png"/>
+            <file src="images/hud/player/health.png"/>
+            <file src="images/hud/player/hunger.png"/>
+            <file src="images/hud/player/thirst.png"/>
+            
+            <!-- SPEEDOMETER -->
+            <file src="images/hud/speedometer/bgfuel.png"/>
+            <file src="images/hud/speedometer/bgspeed.png"/>
+            <file src="images/hud/speedometer/iconfuel.png"/>
+            <file src="images/hud/speedometer/showingfuel.png"/>
+            <file src="images/hud/speedometer/speed.png"/>
 
-    <export function="getInputById" type="client"/>
-    <export function="getButtonById" type="client"/>
-    <export function="getCircleHudById" type="client"/>
+        <!---->
 
-    <export function="destroyInputById" type="client"/>
-    <export function="destroyButtonById" type="client"/>
-    <export function="destroyCircleHudById" type="client"/>
+        <!-- UTILS -->
+        <file src="images/utils/main_logo.png"/>
+
+    <!---->
+
+    <!-- FONTS -->
+        <!-- INTER -->
+        <file src="fonts/inter/black.ttf"/>
+        <file src="fonts/inter/bold.ttf"/>
+        <file src="fonts/inter/extrabold.ttf"/>
+        <file src="fonts/inter/extralight.ttf"/>
+        <file src="fonts/inter/light.ttf"/>
+        <file src="fonts/inter/medium.ttf"/>
+        <file src="fonts/inter/regular.ttf"/>
+        <file src="fonts/inter/semibold.ttf"/>
+        <file src="fonts/inter/thin.ttf"/>
+
+    <!---->
+
+    <!-- EXPORTS -->
+        <export function="createFont" type="client"/>
+        
+        <export function="createMessage" type="client"/>
+        <export function="createMessage" type="server"/>
+
+        <!-- INPUT -->
+        <export function="createInput" type="client"/>
+        <export function="getInputById" type="client"/>
+        <export function="destroyInputById" type="client"/>
+
+        <!-- CIRCLE HUD -->
+        <export function="createCircleHud" type="client"/>
+        <export function="setValueCircleHud" type="client"/>
+        <export function="getCircleHudById" type="client"/>
+        <export function="destroyCircleHudById" type="client"/>
+
+        <!-- BUTTON -->
+        <export function="createButton" type="client"/>
+        <export function="getButtonById" type="client"/>
+        <export function="destroyButtonById" type="client"/>
+    <!---->
 </meta>

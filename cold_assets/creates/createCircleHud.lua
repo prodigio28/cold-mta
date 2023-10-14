@@ -2,7 +2,7 @@ dataCircles = {}
 Circles = {}
 Circles_img = {}
 
-function circleHud(id, data)
+function createCircleHud(id, data)
     if not dataCircles[id] and not Circles[id] then
         dataCircles[id] = data
         Circles[id] = {}
@@ -21,7 +21,7 @@ function circleHud(id, data)
     Circles_img[id].icon = dgsCreateImage(dataCircles[id].circle[1] + dataCircles[id].circle[3] / 2 - dataCircles[id].exDatas.iconSize[1] / 2, dataCircles[id].circle[2] +dataCircles[id].circle[4] / 2 - dataCircles[id].exDatas.iconSize[2] / 2, dataCircles[id].exDatas.iconSize[1], dataCircles[id].exDatas.iconSize[2], dataCircles[id].exDatas.icon, false)
 end
 
-function setValueCircle(id, value)
+function setValueCircleHud(id, value)
     local circlesElement = Circles[id]
     if (circlesElement.value ~= value) then
         if (not circlesElement.state) then
@@ -47,6 +47,10 @@ function getCircleHudById(id)
 end
 
 function destroyCircleHudById(id)
-    Circles[id] = nil
-    Circles_img[id] = nil
+    destroyElement(Circles[id].background)
+    destroyElement(Circles[id].main)
+    destroyElement(Circles_img[id].background)
+    destroyElement(Circles_img[id].main)
+    destroyElement(Circles_img[id].icon)
+    return
 end

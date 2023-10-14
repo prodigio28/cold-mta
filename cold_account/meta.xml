@@ -1,9 +1,8 @@
 <meta>
-
     <info author="@gustavol28" name="Account System" version="1.0.0"/>
 
-    <script src="account/server.lua" type="server"/>
-    
-    <script src="ui/main.lua" type="client" cache="false"/>
+    <script src="code/account/accounts.lua" type="server"/>
+    <script src="code/userinterface/uiAccount.lua" type="client" cache="false"/>
 
+    <include resource="cold_essencials"/>
 </meta>

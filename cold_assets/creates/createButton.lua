@@ -20,5 +20,6 @@ function getButtonById(id)
 end
 
 function destroyButtonById(id)
-    return destroyElement(Buttons[id])
+    destroyElement(Buttons[id])
+    return
 end

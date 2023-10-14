@@ -2,6 +2,11 @@
 
     <info author="@gustavol28" name="Essencials System" version="1.0.0"/>
 
-    <script src="ui/hud.lua" type="client" cache="false"/>
+    <script src="userinterface/hud.lua" type="client" cache="false"/>
+    <script src="userinterface/speedometer.lua" type="client" cache="false"/>
 
+    <export function="showHud" type="client"/>
+    <export function="hideHud" type="client"/>
+    <!-- INCLUDES -->
+    <include resource="cold_vehicles"/>
 </meta>

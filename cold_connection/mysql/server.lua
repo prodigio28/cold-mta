@@ -1,5 +1,5 @@
 mysqlConnection = nil
-trys = 1
+local trys = 1
 
 function MYSQLInitial()
     mysqlConnection = dbConnect("mysql", "dbname="..mysql.dbName..";host="..mysql.dbHost..";charset=utf8", mysql.dbUser, mysql.dbPass)
@@ -16,6 +16,15 @@ function MYSQLInitial()
     end
 end
 addEventHandler("onResourceStart", resourceRoot, MYSQLInitial)
+
+function tryNew(player, cmd)
+    local accountName = getAccountName(getPlayerAccount(player))
+    if accountName and isObjectInACLGroup("user."..accountName, aclGetGroup("Admin")) then
+        trys = 1
+        MYSQLInitial()
+    end
+end
+addCommandHandler("mysqltry", tryNew)
 
 function getMySQL()
     return mysqlConnection

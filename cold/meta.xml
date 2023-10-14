@@ -1,11 +1,20 @@
 <meta>
+    <download_priority_group>1</download_priority_group>
+    <info author="@gustavol28" name="Gamemode COLD RP" version="1.0.0"/>
 
-    <info author="@gustavol28" name="Gamemode to COLD RP" version="1.0.0"/>
-
+    <!-- SERVER SIDE -->
     <script src="player/server.lua" type="server"/>
 
+    <!-- CLIENT SIDE -->
     <script src="ui/main.lua" type="client" cache="false"/>
 
+    <!-- UTILS -->
     <script src="devServer.lua" type="server"/>
 
+    <!-- EXPORTS -->
+    <export function="loadSpawn" type="server"/>
+
+    <!-- INCLUDES -->
+    <include resource="dgs"/>
+    <include resource="cold_assets"/>
 </meta>
