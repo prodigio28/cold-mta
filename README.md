@@ -15,9 +15,7 @@
 
 * 2. Changes such as logo and others are allowed but must be credited to the official creator. 
 
-* 3. No modifications may be published under any circumstances. 
-
-* 4. It can be used on the platform's servers as long as the creator's credit remains
+* 3. It can be used on the platform's servers as long as the creator's credit remains
 
 # Contacts 
 * Discord : **gustavol28**
