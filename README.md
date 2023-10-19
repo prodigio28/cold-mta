@@ -1,6 +1,6 @@
 # Some simple resource to platform Multi Theft Auto
 
-**A Simple Scoreboard Based DGS ([Thisdp's DirectX Graphical User Interface System](https://github.com/thisdp/dgs)) For MTA Servers**
+**Some resources based in DGS ([Thisdp's DirectX Graphical User Interface System](https://github.com/thisdp/dgs)) For MTA Servers**
 
 # Installation 
 * Just copy the dgs first from https://github.com/thisdp/dgs
